@@ -8,13 +8,11 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
  * Hello world!
  *
  */
-public class App 
-{
-    public static TelegramBotsApi main(String[] args ) throws TelegramApiException {
-
-        Bot bot = new Bot("");
+public class App {
+    public static void  main(String[] args ) throws TelegramApiException {
+        Bot bot = new Bot(" ");
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
         telegramBotsApi.registerBot(bot);
-        return telegramBotsApi;
+
     }
 }

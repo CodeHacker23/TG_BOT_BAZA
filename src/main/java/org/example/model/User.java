@@ -8,7 +8,16 @@ public class User {
     private String login;
     private Long userId;
     private BankAccount bankAccount;
-    private StateUser stateUser = StateUser.REG;
+    private StateUser stateUser = StateUser.NOT;
+
+
+    public StateUser getStateUser() {
+        return stateUser;
+    }
+
+    public void setStateUser(StateUser stateUser) {
+        this.stateUser = stateUser;
+    }
 
     public String getLogin() {
         return login;
@@ -39,6 +48,17 @@ public class User {
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
         return Objects.equals(login, user.login) && Objects.equals(userId, user.userId) && Objects.equals(bankAccount, user.bankAccount);
+    }
+
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "login='" + login + '\'' +
+                ", userId=" + userId +
+                ", bankAccount=" + bankAccount +
+                ", stateUser=" + stateUser +
+                '}';
     }
 
     @Override
